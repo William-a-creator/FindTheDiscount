@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is the original price?");
+        int originalPrice = Integer.valueOf(scanner.nextLine());
+        System.out.println("What is the discount as an integer?");
+        int discount = Integer.valueOf(scanner.nextLine());
+        System.out.println(discount(originalPrice, discount));
+    }
+
+
+    public static double discount(int price, int percentage){
+        double percentMultiplier = percentage * .01;
+        double newPrice = price * percentMultiplier;
+        return price - newPrice;
+
+    }
+}
